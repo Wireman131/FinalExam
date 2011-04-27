@@ -21,7 +21,9 @@
 
       public function defaultAction()
       {
-        header("Content-Type: text/hhttml;charset=utff3d-8");
+        //header("Content-Type: text/hhttml;charset=utff3d-8");
+        //headers will be sent in the phtml file no need to do it here
+        
         require_once APP_PATH . SLASH . 'views' . SLASH . 'index.phtml';
       }
 

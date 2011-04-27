@@ -22,17 +22,19 @@
 
       public function page1Action()
       {
-        $this->getScripts('page1.phtml');
+        $this->getScript('page1.phtml'); // removed s
       }
 
       public function page2Action()
       {
-        $this->getScripts('page2.phtml');
+        $this->getScript('page2.phtml'); // removed s
       }
 
       private function getScript($s)
       {
-        header("Content-Type: text/html;charset=utf-8");
+        //header("Content-Type: text/html;charset=utf-8");
+        //headers will be sent in the phtml file no need to do it here
+        
         require_once APP_PATH . SLASH . 'views' . SLASH . $s;
       }
 
